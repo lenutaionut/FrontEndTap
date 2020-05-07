@@ -1,82 +1,47 @@
-<template id="signinTemplate">
-  <form ref="form" action class="signin-form">
-    <h2>Log in</h2>
-    <div class="set-input-margins">
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input placeholder="email adress" />
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input placeholder="password" />
-      </div>
+<template id="login-template">
+  <form class="login-form">
+    <h2>Login</h2>
+    <div style="margin-top:45px" class="form-group">
+      <input
+        required
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="E-mail address"
+      />
     </div>
-    <button type="submit">Sign in</button>
+    <div class="form-group">
+      <input
+        required
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="Password"
+      />
+    </div>
+    <p>Create account! <router-link to="/register">Sign Up</router-link></p>
+    <button type="submit" class="btn btn-primary" id="btn">Login</button>
   </form>
 </template>
 
-<style scoped>
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'PT Sans', sans-serif;
-  background: #e0e0e0;
+<style>
+h2 {
+  text-align: center;
+  color: mediumblue;
 }
 
-button {
-  all: unset;
-  display: inline-block;
-  padding: 1em;
-  letter-spacing: 0.05em;
-  font-size: 14px;
-  border-color: black;
-  border: 1px solid;
-  border-radius: 10px;
+p {
   color: black;
-
-  transition: 250ms;
-  margin: 3em 0.2em 0 0;
-  opacity: 0.4;
+  text-align: left;
 }
 
-button:hover {
-  opacity: 1;
+#btn {
+  width: 30%;
 }
 
-.signin-form {
-  margin: 2em 0;
-  padding: 1em;
-}
-
-.set-input-margins {
-  margin: 0 25em 0 10em;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px;
-}
-
-label {
-  flex: 1;
-  text-align: right;
-  margin-right: 2em;
-}
-
-input {
-  font-size: inherit;
-  border: none;
-  background: whitesmoke;
-  font-family: inherit;
-  padding: 0.4em;
-  flex: 1.5;
-}
-
-input.invalid {
-  border: 1px solid tomato;
+.login-form {
+  margin: 70px auto auto auto;
+  width: 30%;
+  padding: 10px;
 }
 </style>

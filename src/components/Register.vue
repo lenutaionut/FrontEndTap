@@ -1,8 +1,7 @@
 <template id="register-template">
   <form class="register-form">
     <h2>Sign Up</h2>
-    <div class="form-group">
-      <label for="firstname">First Name</label>
+    <div style="margin-top:45px" class="form-group">
       <input
         required
         type="text"
@@ -12,7 +11,6 @@
       />
     </div>
     <div class="form-group">
-      <label for="lastname">Last Name</label>
       <input
         required
         type="text"
@@ -22,7 +20,6 @@
       />
     </div>
     <div class="form-group">
-      <label for="email">E-mail address</label>
       <input
         required
         type="email"
@@ -32,7 +29,6 @@
       />
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
       <input
         required
         type="password"
@@ -42,7 +38,6 @@
       />
     </div>
     <div class="from-group">
-      <label for="checkPassword">Confirm password</label>
       <input
         required
         type="password"
@@ -51,6 +46,7 @@
         placeholder="Confirm password"
       />
     </div>
+    <p>Already have an account? <router-link to="/login">Login</router-link></p>
     <button type="submit" class="btn btn-primary" id="btn">Register</button>
   </form>
 </template>
@@ -61,12 +57,18 @@ h2 {
   color: mediumblue;
 }
 
-#btn {
-  margin-top: 30px;
+p {
+  color: black;
+  text-align: left;
 }
+
+#btn {
+  width: 30%;
+}
+
 .register-form {
-  margin: auto;
-  width: 50%;
+  margin: 70px auto auto auto;
+  width: 30%;
   padding: 10px;
 }
 </style>
