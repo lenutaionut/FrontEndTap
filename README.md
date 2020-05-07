@@ -1,4 +1,4 @@
-# frontendtap
+# FrontEndTap
 
 ## Project setup
 ```
