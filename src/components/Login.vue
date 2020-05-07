@@ -16,8 +16,6 @@
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
-
 body {
   padding: 0;
   margin: 0;
