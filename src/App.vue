@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/register">Register</router-link>|
-      <router-link to="/about">About</router-link>
+      <router-link to="/register">Register</router-link> |
+      <router-link to="/login">Login</router-link>
     </div>
     <router-view />
   </div>
@@ -13,17 +13,17 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  color: #2c3e50;
+  text-align: right;
+  color: rgb(208, 250, 214);
 }
 
 #nav {
-  padding: 30px;
+  padding: 20px;
+  background-color: black;
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  color: rgb(208, 250, 214);
 }
 
 #nav a.router-link-exact-active {
