@@ -16,7 +16,9 @@
             v-if="submitted && errors.has('name')"
             class="alert alert-danger"
             id="alert"
-          >{{errors.first('name')}}</div>
+          >
+            {{ errors.first('name') }}
+          </div>
         </div>
         <div class="form-group">
           <input
@@ -31,7 +33,9 @@
             v-if="submitted && errors.has('surname')"
             class="alert alert-danger"
             id="alert"
-          >{{errors.first('surname')}}</div>
+          >
+            {{ errors.first('surname') }}
+          </div>
         </div>
         <div class="form-group">
           <input
@@ -46,7 +50,9 @@
             v-if="submitted && errors.has('email')"
             class="alert alert-danger"
             id="alert"
-          >{{errors.first('email')}}</div>
+          >
+            {{ errors.first('email') }}
+          </div>
         </div>
         <div class="form-group">
           <input
@@ -61,7 +67,9 @@
             v-if="submitted && errors.has('password')"
             class="alert alert-danger"
             id="alert"
-          >{{errors.first('password')}}</div>
+          >
+            {{ errors.first('password') }}
+          </div>
         </div>
         <p>
           Already have an account?
@@ -75,13 +83,14 @@
       class="alert"
       :class="successful ? 'alert-success' : 'alert-danger'"
       id="alert"
-    >{{message}}</div>
+    >
+      {{ message }}
+    </div>
   </div>
 </template>
 
-
 <script>
-import User from '../model/user'
+import User from '../models/user'
 
 export default {
   data() {
@@ -110,10 +119,11 @@ export default {
       this.submitted = true
       this.$validator.validate().then(isValid => {
         if (isValid) {
-          this.$store.dispatch('auth/register', this.user).then(
+          this.$store.dispatch('register', this.user).then(
             data => {
               this.message = data.message
               this.successful = true
+              this.$router.push('/login')
             },
             error => {
               this.message =
@@ -127,16 +137,6 @@ export default {
       })
     }
   }
-
-  // methods: {
-  //   register() {
-  //     let user = this.user
-  //     this.$store
-  //       .dispatch('auth/register', this.user)
-  //       .then(() => this.$router.push('/profile'))
-  //       .catch(err => console.log(err))
-  //   }
-  // }
 }
 </script>
 <style>
