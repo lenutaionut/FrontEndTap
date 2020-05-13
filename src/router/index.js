@@ -4,6 +4,7 @@ import LoginPage from '../views/LoginPage.vue'
 import RegisterPage from '../views/RegisterPage.vue'
 import Profile from '../views/Profile.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -26,7 +27,6 @@ const routes = [
   {
     path: '/profile',
     name: 'profile',
-
     component: Profile
   }
 ]
