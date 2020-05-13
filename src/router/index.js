@@ -2,13 +2,15 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LoginPage from '../views/LoginPage.vue'
 import RegisterPage from '../views/RegisterPage.vue'
+import Profile from '../views/Profile.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'LoginPage',
+    redirect: '/login',
+    name: 'Home',
     component: LoginPage
   },
   {
@@ -20,6 +22,12 @@ const routes = [
     path: '/register',
     name: 'RegisterPage',
     component: RegisterPage
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+
+    component: Profile
   }
 ]
 

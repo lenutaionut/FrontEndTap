@@ -1,12 +1,26 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/register">Register</router-link> |
+      <router-link to="/register">Register</router-link>|
       <router-link to="/login">Login</router-link>
     </div>
+
+    <a class="nav-link" href @click.prevent="logOut">LogOut</a>
+
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    logOut() {
+      this.$store.dispatch('logout')
+      this.$router.push('/login')
+    }
+  }
+}
+</script>
 
 <style>
 #app {
