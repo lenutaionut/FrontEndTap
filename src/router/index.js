@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LoginPage from '../views/LoginPage.vue'
 import RegisterPage from '../views/RegisterPage.vue'
-import ProfilePage from '../views/ProfilePage.vue'
+import Profile from '../views/Profile.vue'
+
 
 Vue.use(VueRouter)
 
@@ -24,12 +25,9 @@ const routes = [
     component: RegisterPage
   },
   {
-    path: "/profile",
-    name: "ProfilePage",
-    // lazy-loaded when the route is visited.
-    component: function () {
-      return import("../views/ProfilePage.vue");
-    }
+    path: '/profile',
+    name: 'profile',
+    component: Profile
   }
 ]
 
