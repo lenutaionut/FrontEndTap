@@ -1,11 +1,9 @@
 <template>
-  <div id="app">
+  <div :style="myStyle" id="app">
     <div id="nav">
       <router-link to="/register">Register</router-link>|
       <router-link to="/login">Login</router-link>
     </div>
-
-    <a class="nav-link" href @click.prevent="logOut">LogOut</a>
 
     <router-view />
   </div>
@@ -13,10 +11,11 @@
 
 <script>
 export default {
-  methods: {
-    logOut() {
-      this.$store.dispatch('logout')
-      this.$router.push('/login')
+  data() {
+    return {
+      myStyle: {
+        backgroundColor: '#f0f5f5'
+      }
     }
   }
 }
@@ -24,11 +23,9 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: right;
   color: rgb(208, 250, 214);
+  min-height: 100vh;
 }
 
 #nav {
