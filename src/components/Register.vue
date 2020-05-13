@@ -119,10 +119,11 @@ export default {
       this.submitted = true
       this.$validator.validate().then(isValid => {
         if (isValid) {
-          this.$store.dispatch('auth/register', this.user).then(
+          this.$store.dispatch('register', this.user).then(
             data => {
               this.message = data.message
               this.successful = true
+              this.$router.push('/login')
             },
             error => {
               this.message =
@@ -136,16 +137,6 @@ export default {
       })
     }
   }
-
-  // methods: {
-  //   register() {
-  //     let user = this.user
-  //     this.$store
-  //       .dispatch('auth/register', this.user)
-  //       .then(() => this.$router.push('/profile'))
-  //       .catch(err => console.log(err))
-  //   }
-  // }
 }
 </script>
 <style>
