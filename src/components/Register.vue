@@ -16,9 +16,7 @@
             v-if="submitted && errors.has('name')"
             class="alert alert-danger"
             id="alert"
-          >
-            {{ errors.first('name') }}
-          </div>
+          >{{ errors.first('name') }}</div>
         </div>
         <div class="form-group">
           <input
@@ -33,9 +31,7 @@
             v-if="submitted && errors.has('surname')"
             class="alert alert-danger"
             id="alert"
-          >
-            {{ errors.first('surname') }}
-          </div>
+          >{{ errors.first('surname') }}</div>
         </div>
         <div class="form-group">
           <input
@@ -50,9 +46,7 @@
             v-if="submitted && errors.has('email')"
             class="alert alert-danger"
             id="alert"
-          >
-            {{ errors.first('email') }}
-          </div>
+          >{{ errors.first('email') }}</div>
         </div>
         <div class="form-group">
           <input
@@ -67,9 +61,7 @@
             v-if="submitted && errors.has('password')"
             class="alert alert-danger"
             id="alert"
-          >
-            {{ errors.first('password') }}
-          </div>
+          >{{ errors.first('password') }}</div>
         </div>
         <p>
           Already have an account?
@@ -83,9 +75,7 @@
       class="alert"
       :class="successful ? 'alert-success' : 'alert-danger'"
       id="alert"
-    >
-      {{ message }}
-    </div>
+    >{{ message }}</div>
   </div>
 </template>
 
@@ -109,7 +99,7 @@ export default {
 
   mounted() {
     if (this.loggedIn) {
-      this.$router.push('/profile')
+      this.$router.push('/weather')
     }
   },
 
@@ -142,7 +132,7 @@ export default {
 <style>
 h2 {
   text-align: center;
-  color: mediumblue;
+  color: rgb(28, 87, 84);
 }
 
 p {
@@ -152,6 +142,7 @@ p {
 
 #btn {
   width: 30%;
+  margin-bottom: 10px;
 }
 
 #alert {
@@ -161,7 +152,7 @@ p {
 
 .register-form {
   margin: 70px auto auto auto;
-  width: 30%;
+  width: 40%;
   padding: 10px;
 }
 </style>

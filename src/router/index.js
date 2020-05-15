@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LoginPage from '../views/LoginPage.vue'
 import RegisterPage from '../views/RegisterPage.vue'
-import Profile from '../views/Profile.vue'
+import WeatherPage from '../views/WeatherPage.vue'
 
 Vue.use(VueRouter)
 
@@ -24,9 +24,9 @@ const routes = [
     component: RegisterPage
   },
   {
-    path: '/profile',
-    name: 'Profile',
-    component: Profile
+    path: '/weather',
+    name: 'WeatherPage',
+    component: WeatherPage
   }
 ]
 

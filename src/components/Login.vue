@@ -58,7 +58,7 @@ export default {
   },
   created() {
     if (this.loggedIn) {
-      this.$router.push('/profile')
+      this.$router.push('/weather')
     }
   },
   methods: {
@@ -73,7 +73,7 @@ export default {
         if (this.user.email && this.user.password) {
           this.$store.dispatch('login', this.user).then(
             () => {
-              this.$router.push('/profile')
+              this.$router.push('/weather')
             },
             error => {
               this.loading = false
@@ -92,11 +92,6 @@ export default {
 </script>
 
 <style>
-h2 {
-  text-align: center;
-  color: mediumblue;
-}
-
 p {
   color: black;
   text-align: left;
@@ -104,6 +99,7 @@ p {
 
 #btn {
   width: 30%;
+  margin-bottom: 10px;
 }
 
 .login-form {
