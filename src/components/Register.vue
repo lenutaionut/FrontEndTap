@@ -132,7 +132,7 @@ export default {
 <style>
 h2 {
   text-align: center;
-  color: rgb(28, 87, 84);
+  color: rgb(21, 66, 64);
 }
 
 p {
