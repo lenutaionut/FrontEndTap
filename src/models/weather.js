@@ -9,7 +9,9 @@ export default class Weather {
     time,
     description,
     wind,
-    humidity
+    humidity,
+    dayname,
+    feels_like
   ) {
     this.city = city
     this.country = country
@@ -21,5 +23,7 @@ export default class Weather {
     this.description = description
     this.wind = wind
     this.humidity = humidity
+    this.dayname = dayname
+    this.feels_like = feels_like
   }
 }
