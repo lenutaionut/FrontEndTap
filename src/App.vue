@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       myStyle: {
-        backgroundColor: '#f0f5f5'
+        backgroundColor: '#f0f1f0'
       }
     }
   }
@@ -26,6 +26,7 @@ export default {
   text-align: right;
   color: rgb(208, 250, 214);
   min-height: 100vh;
+  padding-bottom: 100px;
 }
 
 #nav {

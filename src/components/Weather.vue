@@ -112,8 +112,8 @@ export default {
 
 <style scoped>
 .card {
-  color: rgb(28, 87, 84);
-  background-color: rgb(203, 213, 235);
+  color: rgb(18, 68, 66);
+  background-color: rgb(115, 155, 241);
 }
 
 .icon {
@@ -131,7 +131,7 @@ export default {
 }
 
 p {
-  color: rgb(96, 106, 107);
+  color: rgb(83, 93, 94);
   text-align: center;
   font-size: 20px;
 }
