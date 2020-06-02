@@ -15,6 +15,10 @@
           <img />
         </li>
         <li class="list-group-item text">
+          <span style="float:left">Feels like</span>
+          {{ wdata.feels_like }}&deg;C
+        </li>
+        <li class="list-group-item text">
           <font-awesome-icon class="icon fa-lg" icon="temperature-high" color="cornflowerblue" />
           {{ wdata.temp_max }}&deg;C
         </li>
@@ -49,7 +53,7 @@ export default {
         'None',
         'None',
         'None',
-        'https://cdn.vuetifyjs.com/images/cards/sun.png',
+        'None',
         'None',
         'None',
         'None',
@@ -83,6 +87,10 @@ export default {
       this.wdata.temperature = (response.data.main.temp - 273.15).toFixed(1)
       this.wdata.temp_min = (response.data.main.temp_min - 273.15).toFixed(1)
       this.wdata.temp_max = (response.data.main.temp_max - 273.15).toFixed(1)
+      this.wdata.feels_like = (response.data.main.feels_like - 273.15).toFixed(
+        1
+      )
+
       this.wdata.humidity = response.data.main.humidity
       this.wdata.wind = response.data.wind.speed
     },
